@@ -1,0 +1,4 @@
+Object-detection-1/
+__pycache__/
+*.pt
+preprocessed_data.json

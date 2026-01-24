@@ -15,7 +15,7 @@ from backbone import SimpleSSDBackbone
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print("Using device:", DEVICE)
 
-NUM_CLASSES = 6          # object classes (NO background)
+NUM_CLASSES = 7          # object classes (NO background)
 ANCHORS_PER_CELL = 3
 BATCH_SIZE = 4
 EPOCHS = 10

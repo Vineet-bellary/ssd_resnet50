@@ -91,7 +91,7 @@ print(f"Label ID to Category Mapping: {label_id_to_cat}\n")
 for file_name, info in image_info.items():
     new_labels = []
     for cat_id in info["labels"]:
-        new_labels.append(cat_id_to_label[cat_id])
+        new_labels.append(cat_id_to_label[cat_id] + 1)
     info["labels"] = new_labels
 
 # for k, v in list(image_info.items())[:5]:
@@ -99,5 +99,7 @@ for file_name, info in image_info.items():
 
 with open("preprocessed_data.json", "w") as f:
     json.dump(image_info, f)
+    
+print(cat_id_to_label)
     
 print("Preprocessed data saved to 'preprocessed_data.json'") 

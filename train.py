@@ -15,10 +15,10 @@ from backbone import SimpleSSDBackbone
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print("Using device:", DEVICE)
 
-NUM_CLASSES = 7          # object classes (NO background)
-ANCHORS_PER_CELL = 3
+NUM_CLASSES = 7
+ANCHORS_PER_CELL = 6
 BATCH_SIZE = 4
-EPOCHS = 10
+EPOCHS = 20
 LR = 1e-4
 
 # -----------------------
@@ -44,7 +44,7 @@ loader = DataLoader(
 # feature_channels must MATCH backbone outputs
 feature_channels = [256, 256, 256]
 
-backbone = SimpleSSDBackbone()   # 👈 your CNN backbone
+backbone = SimpleSSDBackbone()
 
 model = SSDModel(
     backbone=backbone,

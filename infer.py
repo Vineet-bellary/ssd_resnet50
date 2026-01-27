@@ -13,7 +13,7 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # assert DEVICE.type == "cuda", "Inference requires a CUDA-capable device."
 NUM_CLASSES = 7          # object classes (NO background)
 CONF_THRESH = 0.5
-IOU_THRES = 0.5
+IOU_THRES = 0.7
 
 # Class indices to Labels mnapping
 CLASS_LABELS = {
@@ -32,7 +32,7 @@ backbone = SimpleSSDBackbone()
 
 # SAME values as training
 FEATURE_CHANNELS = [256, 256, 256]   # channels of feature maps
-NUM_ANCHORS = 3                    # anchors per cell
+NUM_ANCHORS = 6                    # anchors per cell
 
 model = SSDModel(
     backbone=backbone,

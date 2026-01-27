@@ -1,7 +1,7 @@
 import json
 
 # Loading Data
-with open(r"Object-detection-1\train\_annotations.coco.json", "r") as f:
+with open(r"Object-detection-1\valid\_annotations.coco.json", "r") as f:
     data = json.load(f)
 # print(data.keys())
 print("Data Loaded Successfully!!!\n\n")
@@ -97,9 +97,9 @@ for file_name, info in image_info.items():
 # for k, v in list(image_info.items())[:5]:
 #     print(k, v["labels"])
 
-with open("preprocessed_data.json", "w") as f:
+with open("preprocessed_data_valid.json", "w") as f:
     json.dump(image_info, f)
     
 print(cat_id_to_label)
-    
-print("Preprocessed data saved to 'preprocessed_data.json'") 
+
+print("Preprocessed data saved to 'preprocessed_data_valid.json'") 

@@ -4,21 +4,23 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 from PIL import Image
 
-# Configurations
-IMAGE_DIR = r"Object-detection-1\train"
 
-with open("preprocessed_data.json", "r") as f:
-    image_info = json.load(f)
+def load_samples(preprocessed_json, image_dir):
+    
+    with open(preprocessed_json, "r") as f:
+        image_info = json.load(f)
 
-# Sample creation
-samples = []
+    # Sample creation
+    samples = []
 
-for file_name, info in image_info.items():
-    image_path = rf"{IMAGE_DIR}\{file_name}"
-    labels = info["labels"]
-    bboxes = info["bboxes"]
+    for file_name, info in image_info.items():
+        image_path = rf"{image_dir}\{file_name}"
+        labels = info["labels"]
+        bboxes = info["bboxes"]
 
-    samples.append((image_path, labels, bboxes))
+        samples.append((image_path, labels, bboxes))
+        
+    return samples
 
 # Transformations
 transform = transforms.Compose([
@@ -70,6 +72,10 @@ def ssd_collate_fn(batch):
     
     return images, labels, bboxes
 
+# Configurations
+IMAGE_DIR = r"Object-detection-1\train"
+
+samples = load_samples("preprocessed_data.json", IMAGE_DIR)
 
 def main():
     dataset = DetectionDataset(samples, transform=transform)

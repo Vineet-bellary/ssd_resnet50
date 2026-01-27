@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
+import os
 
 # My imports
 from anchors import build_all_anchors
@@ -18,7 +19,7 @@ print("Using device:", DEVICE)
 NUM_CLASSES = 7
 ANCHORS_PER_CELL = 6
 BATCH_SIZE = 4
-EPOCHS = 20
+EPOCHS = 5
 LR = 1e-4
 
 # -----------------------
@@ -72,10 +73,37 @@ optimizer = torch.optim.Adam(
     lr=LR
 )
 
+# Checkpoint: Load model weights if needed
+def save_checkpoint(epoch, model, optimizer, path="checkpoint.pth"):
+    checkpoint = {
+        'epoch': epoch,
+        'model_state': model.state_dict(),
+        'optimizer_state': optimizer.state_dict()
+    }
+    torch.save(checkpoint, path)
+    print(f"✅ Checkpoint saved at epoch {epoch}")
+    
+def load_checkpoint(model, optimizer, path="checkpoint.pth"):
+    checkpoint = torch.load(path, map_location=DEVICE)
+    
+    model.load_state_dict(checkpoint['model_state'])
+    optimizer.load_state_dict(checkpoint['optimizer_state'])
+    
+    start_epoch = checkpoint['epoch'] + 1
+    print(f"✅ Checkpoint loaded, resuming from epoch {start_epoch}")
+    
+    return start_epoch
+
+
 # -----------------------
 # TRAIN LOOP
 # -----------------------
-for epoch in range(EPOCHS):
+start_epoch = 0
+
+if os.path.exists("checkpoint.pth"):
+    start_epoch = load_checkpoint(model, optimizer, path="checkpoint.pth")
+
+for epoch in range(start_epoch, EPOCHS):
     print("Starting epoch", epoch+1)
     model.train()
 
@@ -152,6 +180,10 @@ for epoch in range(EPOCHS):
         f"Conf: {epoch_conf:.4f}"
     )
     
+    # Save checkpoint every 2 epochs
+    if (epoch + 1) % 2 == 0:
+        save_checkpoint(epoch, model, optimizer, path="checkpoint.pth")
+
 # -----------------------
 # SAVE MODEL
 # -----------------------

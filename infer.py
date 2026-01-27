@@ -28,7 +28,7 @@ CLASS_LABELS = {
 }
 
 IMAGE_PATH = r"Object-detection-1\train\00044_jpg.rf.702514fdf2d245548ae87cbd091d4ac1.jpg"
-MODEL_PATH = "checkpoint_6.pth"
+MODEL_PATH = r"models\checkpoint_9.pth"
 
 # ---------------- MODEL ----------------
 backbone = SimpleSSDBackbone()

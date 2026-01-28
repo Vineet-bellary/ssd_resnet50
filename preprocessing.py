@@ -1,8 +1,8 @@
 import json
 
 # Loading Data
-ANNO_PATH = r"Object-detection-1\train\_annotations.coco.json"
-DEST_PATH = r"preprocessed_data.json"
+ANNO_PATH = r"Object-detection-1\valid\_annotations.coco.json"
+DEST_PATH = r"preprocessed_data_valid.json"
 with open(ANNO_PATH, "r") as f:
     data = json.load(f)
 # print(data.keys())

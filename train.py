@@ -15,7 +15,8 @@ from dataloader import (
     transform,
     ssd_collate_fn
 )
-from backbone import SimpleSSDBackbone
+# from backbone import SimpleSSDBackbone
+from new_backbone import ResNet50Backbone
 
 # Configs
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -63,9 +64,9 @@ valid_loader = DataLoader(
 
 # Example backbone outputs 3 feature maps
 # feature_channels must MATCH backbone outputs
-feature_channels = [256, 256, 256]
+feature_channels = [512, 1024, 2048]
 
-backbone = SimpleSSDBackbone()
+backbone = ResNet50Backbone()
 
 model = SSDModel(
     backbone=backbone,

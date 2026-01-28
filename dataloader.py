@@ -73,12 +73,16 @@ def ssd_collate_fn(batch):
     return images, labels, bboxes
 
 # Configurations
-IMAGE_DIR = r"Object-detection-1\valid"
-ANNO_PATH = r"preprocessed_data_valid.json"
-samples = load_samples(ANNO_PATH, IMAGE_DIR)
+TRAIN_IMAGE_DIR = r"Object-detection-1\train"
+VALID_IMAGE_DIR = r"Object-detection-1\valid"
+TRAIN_ANNO_PATH = r"preprocessed_data_train.json"
+VALID_ANNO_PATH = r"preprocessed_data_valid.json"
+
+train_samples = load_samples(TRAIN_ANNO_PATH, TRAIN_IMAGE_DIR)
+valid_samples = load_samples(VALID_ANNO_PATH, VALID_IMAGE_DIR)
 
 def main():
-    dataset = DetectionDataset(samples, transform=transform)
+    dataset = DetectionDataset(train_samples, transform=transform)
     
     loader = DataLoader(
         dataset,

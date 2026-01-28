@@ -8,8 +8,13 @@ from anchors import build_all_anchors
 from model import SSDModel
 from gt_matching import match_anchors_to_gt
 from loss import ssd_loss
-from dataloader import DetectionDataset, samples, transform
-from dataloader import ssd_collate_fn
+from dataloader import (
+    DetectionDataset,
+    train_samples,
+    valid_samples,
+    transform,
+    ssd_collate_fn
+)
 from backbone import SimpleSSDBackbone
 
 # Configs
@@ -26,15 +31,29 @@ CHECKPOINT_PATH = "checkpoint.pth"
 # -----------------------
 # DATA
 # -----------------------
-dataset = DetectionDataset(
-    samples=samples,
+# TRAIN DATASET
+train_dataset = DetectionDataset(
+    samples=train_samples,
     transform=transform
 )
 
-loader = DataLoader(
-    dataset,
+train_loader = DataLoader(
+    train_dataset,
     batch_size=BATCH_SIZE,
     shuffle=True,
+    collate_fn=ssd_collate_fn
+)
+
+# VALID DATASET
+valid_dataset = DetectionDataset(
+    samples=valid_samples,
+    transform=transform
+)
+
+valid_loader = DataLoader(
+    valid_dataset,
+    batch_size=BATCH_SIZE,
+    shuffle=False,
     collate_fn=ssd_collate_fn
 )
 
@@ -111,8 +130,10 @@ for epoch in range(start_epoch, EPOCHS):
     epoch_loss = 0.0
     epoch_loc = 0.0
     epoch_conf = 0.0
+    
+    # Training loop
 
-    for images, gt_labels_list, gt_boxes_list in loader:
+    for images, gt_labels_list, gt_boxes_list in train_loader:
         images = images.to(DEVICE)
         # print("Images moved to device")
 
@@ -170,20 +191,55 @@ for epoch in range(start_epoch, EPOCHS):
         epoch_loss += total_loss.item()
         epoch_loc += (loc_loss_sum / B).item()
         epoch_conf += (conf_loss_sum / B).item()
-        
+       
+    # Validation loop 
+    model.eval()
+    val_loss = 0.0
+
+    with torch.no_grad():
+        for images, gt_labels_list, gt_boxes_list in valid_loader:
+            images = images.to(DEVICE)
+
+            cls_logits, bbox_preds = model(images)
+            B = images.size(0)
+
+            batch_loss = 0.0
+
+            for i in range(B):
+                cls_targets, bbox_targets, labels_mask = match_anchors_to_gt(
+                    anchors=anchors,
+                    gt_boxes=gt_boxes_list[i].to(DEVICE),
+                    gt_labels=gt_labels_list[i].to(DEVICE),
+                    pos_threshold=0.5,
+                    neg_threshold=0.4,
+                    bg_label=0
+                )
+
+                loss, _, _ = ssd_loss(
+                    cls_logits=cls_logits[i],
+                    bbox_preds=bbox_preds[i],
+                    cls_targets=cls_targets,
+                    bbox_targets=bbox_targets,
+                    labels_mask=labels_mask
+                )
+
+                batch_loss += loss
+
+            val_loss += batch_loss.item() / B
     # -----------------------
     # LOGGING
     # -----------------------
     print(
         f"Epoch [{epoch+1}/{EPOCHS}] | "
-        f"Loss: {epoch_loss:.4f} | "
-        f"Loc: {epoch_loc:.4f} | "
-        f"Conf: {epoch_conf:.4f}"
+        f"Train Loss: {epoch_loss:.4f} | "
+        f"Val Loss: {val_loss:.4f}"
     )
     
     # Save checkpoint every 2 epochs
     if (epoch + 1) % 2 == 0:
         save_checkpoint(epoch, model, optimizer, path=CHECKPOINT_PATH)
+
+
 
 # -----------------------
 # SAVE MODEL

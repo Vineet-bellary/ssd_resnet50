@@ -22,7 +22,7 @@ model = SSDModel(
     num_classes=NUM_CLASSES
 )
 
-MODEL_PATH = r"models\checkpoint_at_33.pth"
+MODEL_PATH = r"models\checkpoint_bs64_33.pth"
 
 '''
 When use checkpoint as model added 'model_state' key

@@ -27,8 +27,8 @@ CLASS_LABELS = {
     7: "Truck",
 }
 
-IMAGE_PATH = r"Object-detection-1\test\t4_png.rf.b58a940bff92265bdd7c28f7df52d6bf.jpg"
-MODEL_PATH = r"models\checkpoint_at_25.pth"
+IMAGE_PATH = r"Object-detection-1\test\Screen-Shot-2022-04-13-at-11-40-18-PM_png.rf.a60c30217c393baac441a70d8abac050.jpg"
+MODEL_PATH = r"models\checkpoint_at_33.pth"
 
 # ---------------- MODEL ----------------
 backbone = SimpleSSDBackbone()

@@ -22,7 +22,7 @@ model = SSDModel(
     num_classes=NUM_CLASSES
 )
 
-MODEL_PATH = r"models\checkpoint_at_27.pth"
+MODEL_PATH = r"models\checkpoint_at_33.pth"
 
 '''
 When use checkpoint as model added 'model_state' key
@@ -34,7 +34,7 @@ model.eval()
 
 dataset = DetectionDataset(samples, transform=transform)
 
-def evaluate_image(pred_boxes, pred_labels, gt_boxes, gt_labels, iou_thresh=0.3):
+def evaluate_image(pred_boxes, pred_labels, gt_boxes, gt_labels, iou_thresh=0.5):
     TP = FP = FN = 0
     matched_gt = set()
 
@@ -53,7 +53,7 @@ def evaluate_image(pred_boxes, pred_labels, gt_boxes, gt_labels, iou_thresh=0.3)
         best_iou, best_gt = torch.max(iou_matrix[p], dim=0)
 
         if best_iou >= iou_thresh:
-            if best_gt.item() not in matched_gt: #and pred_labels[p] == gt_labels[best_gt]:
+            if best_gt.item() not in matched_gt and pred_labels[p] == gt_labels[best_gt]:
                 TP += 1
                 matched_gt.add(best_gt.item())
             else:

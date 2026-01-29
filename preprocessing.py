@@ -1,107 +1,43 @@
 import json
+import os
 
-# Loading Data
-ANNO_PATH = r"Object-detection-1\valid\_annotations.coco.json"
-DEST_PATH = r"preprocessed_data_valid.json"
-with open(ANNO_PATH, "r") as f:
-    data = json.load(f)
-# print(data.keys())
-print("Data Loaded Successfully!!!\n\n")
+def preprocess_for_my_train_script(coco_json_path, output_path, img_dir):
+    with open(coco_json_path, 'r') as f:
+        data = json.load(f)
 
-"""
-We need a tuple with Images, Labels, bboxes to feed into Model.
-Images:
-Labels: 
-bboxes: 
-"""
+    # 1. Map category IDs to be contiguous (0 to 6)
+    categories = data['categories']
+    cat_id_map = {cat['id']: i for i, cat in enumerate(categories)}
 
-# Classes
-categories = data["categories"]
-classes = []
-
-for cat in categories:
-    classes.append(cat["name"])
-# print(f"{classes}\n\n")
-
-# Metadata Building
-images = data["images"]
-
-imgs = {}
-for image in images:
-    imgs[image["id"]] = image["file_name"]
-
-annotations = data["annotations"]
-
-image_info = {}
-for ann in annotations:
-    img_id = ann["image_id"]
-    file_name = imgs[img_id]
-    bbox = ann["bbox"]
-    label = ann["category_id"]
-
-    if file_name not in image_info:
-        image_info[file_name] = {"labels": [], "bboxes": []}
-
-    image_info[file_name]["labels"].append(label)
-    image_info[file_name]["bboxes"].append(bbox)
-
-"""
-Upto here we have made a metadata from the Coco annotation file
-
-Next step is to make the data into model ready format 
-"""
-
-
-# For normalizing BBoxes
-for file_name, info in image_info.items():
-    for i, bbox in enumerate(info["bboxes"]):
-        # fetching bbox values
-        x_min = bbox[0]
-        y_min = bbox[1]
-        width = bbox[2]
-        height = bbox[3]
-
-        # Calculating center coordinates
-        x_center = x_min + width / 2
-        y_center = y_min + height / 2
-
-        # Normalizing
-        x_center /= 224
-        y_center /= 224
-        width /= 224
-        height /= 224
-
-        # Updating bbox
-        info["bboxes"][i] = [x_center, y_center, width, height]
-
-# for k, v in list(image_info.items())[:2]:
-#     print(f"Image: {k} -> Labels: {v['labels']} -> BBoxes: {v['bboxes']}\n")
-
-# for f, info in list(image_info.items())[:3]:
-#     print(f"Image: {f} -> Labels: {info['labels']} -> BBoxes: {info['bboxes']}\n")
-
-cat_id_to_label = {}
-label_id_to_cat = {}
-for idx, cat in enumerate(categories):
-    cat_id_to_label[cat["id"]] = idx
-    label_id_to_cat[idx] = cat["id"]
-
-print(f"Category ID to Label Mapping: {cat_id_to_label}\n")
-print(f"Label ID to Category Mapping: {label_id_to_cat}\n")
-
-
-for file_name, info in image_info.items():
-    new_labels = []
-    for cat_id in info["labels"]:
-        new_labels.append(cat_id_to_label[cat_id] + 1)
-    info["labels"] = new_labels
-
-# for k, v in list(image_info.items())[:5]:
-#     print(k, v["labels"])
-
-with open(DEST_PATH, "w") as f:
-    json.dump(image_info, f)
+    # 2. Build a lookup for images
+    images_dict = {img['id']: img for img in data['images']}
     
-print(cat_id_to_label)
+    # 3. Restructure into the format expected by dataloader.py
+    processed_data = {}
+    
+    for ann in data['annotations']:
+        img_id = ann['image_id']
+        if img_id not in images_dict:
+            continue
+            
+        img_info = images_dict[img_id]
+        file_name = img_info['file_name']
+        
+        # Verify image exists
+        if not os.path.exists(os.path.join(img_dir, file_name)):
+            continue
 
-print(f"Preprocessed data saved to {DEST_PATH} successfully!") 
+        if file_name not in processed_data:
+            processed_data[file_name] = {"labels": [], "bboxes": []}
+        
+        processed_data[file_name]["labels"].append(cat_id_map[ann['category_id']])
+        processed_data[file_name]["bboxes"].append(ann['bbox'])
+
+    # Save in the format your dataloader.py expects
+    with open(output_path, 'w') as f:
+        json.dump(processed_data, f)
+
+    print(f"Done! Saved {len(processed_data)} valid images to {output_path}")
+
+# Usage
+preprocess_for_my_train_script(r'Object-detection-1\valid\_annotations.coco.json', 'preprocessed_data_valid.json', r'Object-detection-1\valid')

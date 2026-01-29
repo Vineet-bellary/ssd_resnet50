@@ -93,6 +93,18 @@ def ssd_loss(
     bbox_targets: Tensor [A, 4]
     labels_mask: Tensor [A]
     """
+    
+    # Flatten the batch dimension so the existing logic works on all anchors at once
+    B, A, C_plus_1 = cls_logits.shape
+    
+    cls_logits = cls_logits.view(-1, C_plus_1) # [B*A, C+1]
+    bbox_preds = bbox_preds.view(-1, 4)        # [B*A, 4]
+    cls_targets = cls_targets.view(-1)         # [B*A]
+    bbox_targets = bbox_targets.view(-1, 4)    # [B*A, 4]
+    labels_mask = labels_mask.view(-1)         # [B*A]
+
+    # Now the rest of your functions (localization_loss, hard_negative_mining) 
+    # will work perfectly because they treat the flattened batch as one large image.
 
     # -------------------------
     # 1) Localization loss
@@ -110,20 +122,14 @@ def ssd_loss(
         cls_logits,
         cls_targets
     )
-    valid_mask = valid_mask.to(labels_mask.device)
-    labels_mask_valid = labels_mask[valid_mask]
-
-    # Align labels_mask to valid anchors
-    labels_mask_valid = labels_mask[valid_mask]
     
-
     # -------------------------
     # 3) Hard negative mining
     # -------------------------
     conf_mask = hard_negative_mining(
-        conf_loss_per_anchor,
-        cls_targets[valid_mask],
-        labels_mask_valid,
+        conf_loss_per_anchor, 
+        cls_targets[valid_mask], 
+        labels_mask[valid_mask], 
         neg_pos_ratio
     )
 

@@ -124,10 +124,11 @@ def compute_bbox_targets(anchors, gt_boxes, matched_gt_idx, labels):
     ax, ay, aw, ah = a[:, 0], a[:, 1], a[:, 2], a[:, 3]
     gx, gy, gw, gh = g[:, 0], g[:, 1], g[:, 2], g[:, 3]
 
-    tx = (gx - ax) / aw
-    ty = (gy - ay) / ah
-    tw = torch.log(gw / aw)
-    th = torch.log(gh / ah)
+    # Standard SSD Variances
+    tx = ((gx - ax) / aw) / 0.1
+    ty = ((gy - ay) / ah) / 0.1
+    tw = torch.log(gw / aw) / 0.2
+    th = torch.log(gh / ah) / 0.2
 
     bbox_targets[pos_indices] = torch.stack([tx, ty, tw, th], dim=1)
     return bbox_targets
@@ -141,7 +142,7 @@ def match_anchors_to_gt(
     bg_label=0
 ):
     device = anchors.device
-    assert anchors.is_cuda, "ANCHORS NOT ON CUDA"
+    # assert anchors.is_cuda, "ANCHORS NOT ON CUDA"
     # print("ANCHORS DEVICE:", anchors.device)
     # print("GT BOXES DEVICE:", gt_boxes.device)  
 

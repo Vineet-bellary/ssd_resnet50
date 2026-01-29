@@ -32,30 +32,35 @@ CHECKPOINT_PATH = "checkpoint.pth"
 # -----------------------
 # DATA
 # -----------------------
-# TRAIN DATASET
+anchors_cpu = build_all_anchors()
+
 train_dataset = DetectionDataset(
     samples=train_samples,
+    anchors=anchors_cpu,
     transform=transform
 )
 
+valid_dataset = DetectionDataset(
+    samples=valid_samples,
+    anchors=anchors_cpu,
+    transform=transform
+)
+
+# ADD THESE: You must define the loaders before the loops
 train_loader = DataLoader(
     train_dataset,
     batch_size=BATCH_SIZE,
     shuffle=True,
-    collate_fn=ssd_collate_fn
-)
-
-# VALID DATASET
-valid_dataset = DetectionDataset(
-    samples=valid_samples,
-    transform=transform
+    collate_fn=ssd_collate_fn,
+    num_workers=4  # Speed boost: matching now happens in parallel
 )
 
 valid_loader = DataLoader(
     valid_dataset,
     batch_size=BATCH_SIZE,
     shuffle=False,
-    collate_fn=ssd_collate_fn
+    collate_fn=ssd_collate_fn,
+    num_workers=4
 )
 
 # -----------------------
@@ -123,123 +128,70 @@ start_epoch = 0
 
 if os.path.exists(CHECKPOINT_PATH):
     start_epoch = load_checkpoint(model, optimizer, path=CHECKPOINT_PATH)
+    print("Checkpoint loaded. Resuming training...")
 
 for epoch in range(start_epoch, EPOCHS):
-    print("Starting epoch", epoch+1)
     model.train()
-
     epoch_loss = 0.0
-    epoch_loc = 0.0
-    epoch_conf = 0.0
     
-    # Training loop
-
-    for images, gt_labels_list, gt_boxes_list in train_loader:
+    for images, cls_targets, bbox_targets, labels_mask in train_loader:
         images = images.to(DEVICE)
-        # print("Images moved to device")
+        cls_targets = cls_targets.to(DEVICE)
+        bbox_targets = bbox_targets.to(DEVICE)
+        labels_mask = labels_mask.to(DEVICE)
 
-        # -----------------------
-        # FORWARD
-        # -----------------------
         cls_logits, bbox_preds = model(images)
-        # print("Model forward done")
-        # cls_logits: [B, A, C+1]
-        # bbox_preds: [B, A, 4]
 
-        B = images.size(0)
-
-        total_loss = 0.0
-        loc_loss_sum = 0.0
-        conf_loss_sum = 0.0
-
-        # -----------------------
-        # PER-IMAGE MATCHING
-        # -----------------------
-        for i in range(B):
-            # print(f"Matching image {i}")
-            cls_targets, bbox_targets, labels_mask = match_anchors_to_gt(
-                anchors=anchors,
-                gt_boxes=gt_boxes_list[i].to(DEVICE),
-                gt_labels=gt_labels_list[i].to(DEVICE),
-                pos_threshold=0.5,
-                neg_threshold=0.4,
-                bg_label=0
-            )
-            # print(f"Matching done for image {i}")
-
-            loss, loc_l, conf_l = ssd_loss(
-                cls_logits=cls_logits[i],
-                bbox_preds=bbox_preds[i],
-                cls_targets=cls_targets,
-                bbox_targets=bbox_targets,
-                labels_mask=labels_mask,
-                neg_pos_ratio=3
-            )
-
-            total_loss += loss
-            loc_loss_sum += loc_l
-            conf_loss_sum += conf_l
-
-        # -----------------------
-        # BACKWARD
-        # -----------------------
-        total_loss = total_loss / B
+        total_loss, _, _ = ssd_loss(
+            cls_logits=cls_logits,
+            bbox_preds=bbox_preds,
+            cls_targets=cls_targets,
+            bbox_targets=bbox_targets,
+            labels_mask=labels_mask,
+            neg_pos_ratio=3
+        )
 
         optimizer.zero_grad()
         total_loss.backward()
         optimizer.step()
 
         epoch_loss += total_loss.item()
-        epoch_loc += (loc_loss_sum / B).item()
-        epoch_conf += (conf_loss_sum / B).item()
        
     # Validation loop 
     model.eval()
-    val_loss = 0.0
+    val_accumulator = 0.0 
 
     with torch.no_grad():
-        for images, gt_labels_list, gt_boxes_list in valid_loader:
-            images = images.to(DEVICE)
+        for images, cls_targets, bbox_targets, labels_mask in valid_loader:
+            images, cls_targets = images.to(DEVICE), cls_targets.to(DEVICE)
+            bbox_targets, labels_mask = bbox_targets.to(DEVICE), labels_mask.to(DEVICE)
 
             cls_logits, bbox_preds = model(images)
-            B = images.size(0)
 
-            batch_loss = 0.0
+            loss, _, _ = ssd_loss(
+                cls_logits=cls_logits,
+                bbox_preds=bbox_preds,
+                cls_targets=cls_targets,
+                bbox_targets=bbox_targets,
+                labels_mask=labels_mask
+            )
+            # FIX from your screenshot: loss.item() is a float. 
+            # val_accumulator is now a float. No more .item() needed later.
+            val_accumulator += loss.item()
 
-            for i in range(B):
-                cls_targets, bbox_targets, labels_mask = match_anchors_to_gt(
-                    anchors=anchors,
-                    gt_boxes=gt_boxes_list[i].to(DEVICE),
-                    gt_labels=gt_labels_list[i].to(DEVICE),
-                    pos_threshold=0.5,
-                    neg_threshold=0.4,
-                    bg_label=0
-                )
+    # Final Average Calculations
+    avg_train_loss = epoch_loss / len(train_loader)
+    avg_val_loss = val_accumulator / len(valid_loader)
 
-                loss, _, _ = ssd_loss(
-                    cls_logits=cls_logits[i],
-                    bbox_preds=bbox_preds[i],
-                    cls_targets=cls_targets,
-                    bbox_targets=bbox_targets,
-                    labels_mask=labels_mask
-                )
-
-                batch_loss += loss
-
-            val_loss += batch_loss.item() / B
-    # -----------------------
-    # LOGGING
-    # -----------------------
     print(
         f"Epoch [{epoch+1}/{EPOCHS}] | "
-        f"Train Loss: {epoch_loss:.4f} | "
-        f"Val Loss: {val_loss:.4f}"
+        f"Train Loss: {avg_train_loss:.4f} | "
+        f"Val Loss: {avg_val_loss:.4f}"
     )
     
     # Save checkpoint every 2 epochs
     if (epoch + 1) % 2 == 0:
         save_checkpoint(epoch, model, optimizer, path=CHECKPOINT_PATH)
-
 
 
 # -----------------------

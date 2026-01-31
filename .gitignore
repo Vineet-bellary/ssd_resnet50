@@ -7,3 +7,5 @@ __pycache__/
 
 *.pt
 *.pth
+ssd-object-detection-5
+old data json

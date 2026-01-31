@@ -10,8 +10,15 @@ def json_preprocessor(coco_json_path, output_path, img_dir):
     #    Background = 0
     #    Object classes start from 1
     # -------------------------------------------------
-    categories = data["categories"]
-    cat_id_map = {cat["id"]: idx + 1 for idx, cat in enumerate(categories)}
+    VALID_CLASSES = ["knife", "pistol", "rifle", "shotgun"]
+
+    cat_id_map = {}
+    new_id = 1
+
+    for cat in data["categories"]:
+        if cat["name"] in VALID_CLASSES:
+            cat_id_map[cat["id"]] = new_id
+            new_id += 1
 
     # -------------------------------------------------
     # 2. Image lookup by image_id
@@ -63,6 +70,9 @@ def json_preprocessor(coco_json_path, output_path, img_dir):
             }
 
         # Label remap (background = 0, objects start from 1)
+# Skip annotations whose category is not in VALID_CLASSES
+        if ann["category_id"] not in cat_id_map:
+            continue
         new_label = cat_id_map[ann["category_id"]]
 
         processed_data[file_name]["labels"].append(new_label)

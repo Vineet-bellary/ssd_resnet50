@@ -10,10 +10,11 @@ from gt_matching import decode_boxes  # Ensure this uses the 0.1/0.2 variances!
 
 # Config
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-CHECKPOINT = r"models\checkpoint_3.pth"
-NUM_CLASSES = 7
-CONF_THRESHOLD = 0.5  # Minimum score to show a box
+MODEL = r"ssd_model_final.pth"
+NUM_CLASSES = 4
+CONF_THRESHOLD = 0.3  # Minimum score to show a box
 IOU_THRESHOLD = 0.4  # NMS threshold
+
 
 # Using single image inference
 def run_inference(image_path, model, anchors, class_names):
@@ -39,7 +40,7 @@ def run_inference(image_path, model, anchors, class_names):
     # # --- DEBUG: PRINT RAW OUTPUT ---
     # top_scores, top_indices = torch.topk(scores, 10)
     # top_labels = labels[top_indices]
-    
+
     # print("\n" + "="*40)
     # print("DEBUG: TOP 10 RAW PREDICTIONS")
     # print("="*40)
@@ -108,11 +109,12 @@ def run_inference(image_path, model, anchors, class_names):
     print("-------------------------------------------\n")
     return orig_img
 
+
 # Using webcam live feed
 def infer_on_frame(frame, model, anchors, class_names):
     orig_img = frame.copy()
     h_orig, w_orig, _ = orig_img.shape
-    
+
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
     img_resized = cv2.resize(orig_img, (224, 224))
@@ -149,33 +151,37 @@ def infer_on_frame(frame, model, anchors, class_names):
         xmax = int(box[2] * w_orig)
         ymax = int(box[3] * h_orig)
 
-        cv2.rectangle(orig_img, (xmin, ymin), (xmax, ymax), (0,255,0), 2)
-        cv2.putText(orig_img, f"{name}:{conf:.2f}",
-                    (xmin, max(20, ymin-10)),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2)
+        if conf > 0.5:
+            print(f"[WEBCAM] {name:10} | Conf: {conf:.4f}")
+
+        cv2.rectangle(orig_img, (xmin, ymin), (xmax, ymax), (0, 255, 0), 2)
+        cv2.putText(
+            orig_img,
+            f"{name}:{conf:.2f}",
+            (xmin, max(20, ymin - 10)),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.5,
+            (0, 255, 0),
+            2,
+        )
 
     return orig_img
 
 
 if __name__ == "__main__":
     # Setup
-    test_img_path = r"Object-detection-1\test\40_jpeg.rf.96c7a1c0150a9ecfc683b194fc6012f7.jpg"
+    test_img_path = (
+        r"Object-detection-1\test\40_jpeg.rf.96c7a1c0150a9ecfc683b194fc6012f7.jpg"
+    )
 
-    class_map = {
-        1: "vehicles-and-traffic-signals",
-        2: "bike",
-        3: "bus",
-        4: "car",
-        5: "person",
-        6: "motorcycle",
-        7: "truck",
-    }
+    class_map = {1: "knife", 2: "pistol", 3: "rifle", 4: "shotgun"}
 
     anchors = build_all_anchors().to(DEVICE)
 
     model = SSDModel(ResNet50Backbone(), [512, 1024, 2048], 6, NUM_CLASSES).to(DEVICE)
-    checkpoint = torch.load(CHECKPOINT, map_location=DEVICE, weights_only=True)
-    model.load_state_dict(checkpoint["model_state"])
+    print(model.heads[0].cls_conv.out_channels)
+    trained_model = torch.load(MODEL, map_location=DEVICE, weights_only=True)
+    model.load_state_dict(trained_model)
 
     # result = run_inference(test_img_path, model, anchors, class_map)
     # # cv2.imwrite("output.jpg", result)
@@ -188,7 +194,7 @@ if __name__ == "__main__":
 
     # # Clean up and close the window
     # cv2.destroyAllWindows()
-    
+
     # -------------------- WEBCAM INFERENCE --------------------
     print("Starting webcam... Press 'q' to quit")
 
@@ -200,13 +206,13 @@ if __name__ == "__main__":
         ret, frame = cap.read()
         if not ret:
             break
-        if frame_count % 2 == 0:   # every 2 frames
+        if frame_count % 2 == 0:  # every 2 frames
             output = infer_on_frame(frame, model, anchors, class_map)
-            
+
         frame_count += 1
         cv2.imshow("SSD Webcam Detection", output)
-        
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+
+        if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 
     cap.release()

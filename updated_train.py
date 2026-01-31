@@ -19,7 +19,7 @@ from new_backbone import ResNet50Backbone
 # -------------------------------------------------
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-NUM_CLASSES = 4       # 🔴 VERIFY THIS AFTER FIRST BATCH
+NUM_CLASSES = 4
 ANCHORS_PER_CELL = 6
 BATCH_SIZE = 16
 EPOCHS = 10
@@ -65,7 +65,7 @@ def main():
         batch_size=BATCH_SIZE,
         shuffle=True,
         collate_fn=ssd_collate_fn,
-        num_workers=2,
+        num_workers=0,
         pin_memory=True
     )
 
@@ -74,7 +74,7 @@ def main():
         batch_size=BATCH_SIZE,
         shuffle=False,
         collate_fn=ssd_collate_fn,
-        num_workers=2,
+        num_workers=0,
         pin_memory=True
     )
 

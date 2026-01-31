@@ -1,7 +1,7 @@
 {
   "HP0RZKMECRUQ_jpg.rf.c82992dad659777eed4788770044dc75.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -13,21 +13,12 @@
     ]
   },
   "WIAA9QS7WSJ9_jpg.rf.111f64ba5b59c2c478e9d4540d637522.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.30245535714285715,
-        0.484375,
-        0.47098214285714285,
-        0.4955357142857143
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "S4WGCPF9CLJ3_jpg.rf.52c2cfec0000e5081d509cc25478e0d8.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -40,7 +31,7 @@
   },
   "KJI4XJFA6DFR_jpg.rf.cfe24ea606971dd77e2d3eb6b3d1c895.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -53,7 +44,7 @@
   },
   "shotgun-1038-_jpg.rf.5efe8d2fb1e2cf069aa594cbb1945e88.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -66,7 +57,7 @@
   },
   "D7Y7YCA2Y6MK_jpg.rf.b8ce4f38bd333ab6988bb75b11e42d16.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -78,34 +69,16 @@
     ]
   },
   "GPGADA0O17K8_jpg.rf.b4d22672f2eb7c97e24d4447f6e4f58b.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5345982142857143,
-        0.5256696428571429,
-        0.7745535714285714,
-        0.890625
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "1XIP2NTFCIXM_jpg.rf.6d25a5303f94a075a4e1ddeaf575278e.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5,
-        0.5,
-        1.0,
-        1.0
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1034-_jpg.rf.28b9fd3e51dee7df01e3c9b4b7128e80.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -118,7 +91,7 @@
   },
   "XBC0QCWMSJS6_jpg.rf.2633594833039c91ad439bb90cdb32b1.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -131,7 +104,7 @@
   },
   "6YJ680C1J42M_jpg.rf.c408e2ebab980cf564dba2067183085a.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -144,7 +117,7 @@
   },
   "shotgun-1040-_jpg.rf.bd9b0a205983a3884a71bc4c7d9ffac2.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -157,7 +130,7 @@
   },
   "198_webp.rf.a1b8873a871c932aed35746cec40c8e1.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -170,8 +143,8 @@
   },
   "WYBZ4JB8UCXX_jpg.rf.8fbb0cdc6ac2225ec6829b9dea324895.jpg": {
     "labels": [
-      3,
-      3
+      2,
+      2
     ],
     "bboxes": [
       [
@@ -190,7 +163,7 @@
   },
   "3DWA9D95JIPJ_jpg.rf.0d0ea86ed4e93f1b737e07027d58ceaa.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -203,7 +176,7 @@
   },
   "shotgun-1007-_jpg.rf.61d249bbac4788dff895e4369aa2820e.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -215,21 +188,12 @@
     ]
   },
   "RNOP5C7YLKXI_jpg.rf.87648db8d86085bcf0ab6b62c4c8e1ac.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.43080357142857145,
-        0.20089285714285715,
-        0.8616071428571429,
-        0.39285714285714285
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "NGSMXNN4PDY4_jpg.rf.3d1b6b00c395fcf070c6061dc3cf8b87.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -242,7 +206,7 @@
   },
   "shotgun-1073-_jpg.rf.ff1f70c4f5f0a02578a2ed2644c7aee3.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -255,7 +219,7 @@
   },
   "GTDYRRA3SQC1_jpg.rf.3ac0c6f6d76ae12d8579c7f6bc1d57e0.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -267,21 +231,12 @@
     ]
   },
   "P3HKPG9E3ILS_jpg.rf.ba8565a09ee856cbb6c3b00ebbc0f2c4.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.49888392857142855,
-        0.5915178571428571,
-        0.9977678571428571,
-        0.8169642857142857
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "ZAEI4WRRURBZ_jpg.rf.49d64920dfc05b2f67701ab9ce707380.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -294,7 +249,7 @@
   },
   "XJ46HLYBF9NO_jpg.rf.391858c14e030c068cc26be23e0a6863.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -307,7 +262,7 @@
   },
   "WQDA0PQXO6Z5_jpg.rf.ae79c9d22a83ad5852c42857aa12201d.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -320,7 +275,7 @@
   },
   "529XM854LF8Q_jpg.rf.fa3aa8aeaaf79b301398cffe24ed128e.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -333,7 +288,7 @@
   },
   "J8FLEZZ0FQNV_jpg.rf.548a28cf90f5e585fd36364803da7997.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -345,34 +300,16 @@
     ]
   },
   "8F3SFJL7M2RB_jpg.rf.5ab1faba117cd9846af304a1c5e21dc2.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.49330357142857145,
-        0.4765625,
-        0.96875,
-        0.828125
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "SV39X3K1R879_jpg.rf.95823414db4c7c57048d16a5e6c1182d.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.49888392857142855,
-        0.49888392857142855,
-        0.9888392857142857,
-        0.9888392857142857
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "5ZYU5LT126RY_jpg.rf.e0adb78d7684d59386c973f1a8496366.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -385,7 +322,7 @@
   },
   "50I5WZTZNNWG_jpg.rf.9604bb641f7fcb304b36027369aa0857.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -398,7 +335,7 @@
   },
   "19PB694VZQQE_jpg.rf.ba66ba25fe1996eb2c085a06937c911e.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -411,7 +348,7 @@
   },
   "FYJTIM0AOMNO_jpg.rf.79de7a435c98c948770b7db078997b8f.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -424,7 +361,7 @@
   },
   "5JSRK5X54MKV_jpg.rf.fdfca63a876f9ac190ea4630df3b73d1.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -436,21 +373,12 @@
     ]
   },
   "GMAS3PM9ULQC_jpg.rf.59a395a87f127ac6d6d1b85981c8ed4b.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5,
-        0.5491071428571429,
-        1.0,
-        0.9017857142857143
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1095-_jpg.rf.66cffff6ac567e6a7a76fec687922a60.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -463,7 +391,7 @@
   },
   "EC9GWMKKYK30_jpg.rf.27e7fbac2643db5cb9b4760f3e7bff94.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -475,21 +403,12 @@
     ]
   },
   "DB927E9ULMRV_jpg.rf.7ac2703bfc0da88fe0b67cd3aabea786.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.48660714285714285,
-        0.5636160714285714,
-        0.9464285714285714,
-        0.8683035714285714
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "199_webp.rf.9662d30f15b542e2ac3f161a0df68909.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -502,7 +421,7 @@
   },
   "LRE9EUI8ZUI7_jpg.rf.ef30d7d46d9a361f6dcd43375cc410b4.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -514,21 +433,12 @@
     ]
   },
   "9QCHJR193L9T_jpg.rf.338fe183a49206143eeb405e69cdf5bd.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.36160714285714285,
-        0.4174107142857143,
-        0.7232142857142857,
-        0.8080357142857143
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1016-_jpg.rf.93d7af89647a9c9714844bccef74afe4.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -541,7 +451,7 @@
   },
   "9HMLDH88RWM5_jpg.rf.3ff816ca39cff2878fa7c764857ccfac.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -554,7 +464,7 @@
   },
   "957MJ6RG6XK0_jpg.rf.a6a156366f5dbffa4c5983d5b8d39d4b.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -567,7 +477,7 @@
   },
   "shotgun-1073-_jpg.rf.2cea23b0a690e8e467edd1f3dc2f2d07.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -580,7 +490,7 @@
   },
   "shotgun-1016-_jpg.rf.7f8309876310364e56683014efaebfe5.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -593,7 +503,7 @@
   },
   "SA20EW1FHJ0E_jpg.rf.af6b46dea3f9c36147be8e64e8f8c3a7.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -605,21 +515,12 @@
     ]
   },
   "LFGT93XYZSFU_jpg.rf.ace6ff925ee4b4451abe72a53d987f4e.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5546875,
-        0.5,
-        0.18973214285714285,
-        1.0
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1014-_jpg.rf.7e0b3feb8619da5013a3cf024fa0737e.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -631,21 +532,12 @@
     ]
   },
   "TO7W4FWG9M21_jpg.rf.97ee1046e90016f8174d70dd29eaef6c.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5,
-        0.5,
-        1.0,
-        1.0
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "ZN03EZB2W2RG_jpg.rf.16c16f10e5f624040a5a12c73a87cdc6.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -658,7 +550,7 @@
   },
   "shotgun-1068-_jpg.rf.aa0d3a22c7b5d595745c51297d8a7416.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -671,7 +563,7 @@
   },
   "BDRQKCFSJQ60_jpg.rf.176cba41ee1b7fc7ebe039b02a7ba460.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -684,7 +576,7 @@
   },
   "I3AHRSONASIR_jpg.rf.2279cc520ea0d4c8ec598546651b7b9d.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -697,7 +589,7 @@
   },
   "AC7Y9O582O5K_jpg.rf.78239ec921b1618563da9268eca955bd.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -710,7 +602,7 @@
   },
   "TFT5WNQ56ILS_jpg.rf.b3ea916adad3926de949700e028d3afb.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -723,7 +615,7 @@
   },
   "shotgun-1035-_jpg.rf.05caa844e599d0ae31e92305d3f97346.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -735,21 +627,12 @@
     ]
   },
   "D0C74D796E3P_jpg.rf.0c01b3d511ea99b5f929c19f06ea316f.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.47098214285714285,
-        0.6540178571428571,
-        0.9419642857142857,
-        0.5044642857142857
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1049-_jpg.rf.36cfd87a487d69482b17834b23b21f30.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -761,34 +644,16 @@
     ]
   },
   "P1XM5C107FJX_jpg.rf.517d5f202c9d02ca1131785c9b2fd0f7.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5,
-        0.47879464285714285,
-        1.0,
-        0.6183035714285714
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "10ETGXJJIHEW_jpg.rf.88d725eac1dd68b0288e5cce3666f1c7.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.45089285714285715,
-        0.5368303571428571,
-        0.6785714285714286,
-        0.921875
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "RL9OQPC05J3G_jpg.rf.d825c1d062faa8d0261a9168a4ffdfbd.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -801,7 +666,7 @@
   },
   "shotgun-1051-_jpg.rf.3c25411c2d07b0395141fe2c281498b3.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -814,7 +679,7 @@
   },
   "NGQDB0ZN2FZL_jpg.rf.e2b14b5b44bc1bba1d1429494fff7b29.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -826,21 +691,12 @@
     ]
   },
   "RIKSEA4L00NU_jpg.rf.9022ced9c0b9d48e5a5b1aafcc4ca140.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.4921875,
-        0.48214285714285715,
-        0.9397321428571429,
-        0.8303571428571429
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1046-_jpg.rf.56d801830254ac05c9e896b368adcb51.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -853,7 +709,7 @@
   },
   "shotgun-1144-_jpg.rf.857cec1bbc1f17eebe9c6c0166969753.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -866,7 +722,7 @@
   },
   "3_webp.rf.549ae8c8a6202a4e3a3ab4028b9a1538.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -879,7 +735,7 @@
   },
   "HBRYM8Q1L9L4_jpg.rf.0077062f3700d96132b9e70475f86169.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -892,7 +748,7 @@
   },
   "shotgun-1083-_jpg.rf.0b5f11274a7b64d10f2e8545aadd5cc4.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -905,7 +761,7 @@
   },
   "shotgun-1040-_jpg.rf.67425b10be75baa60a264420b8abd890.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -918,8 +774,8 @@
   },
   "7U7Q5IH1JG1D_jpg.rf.a646effbe3d3c94f95cc065aea083e37.jpg": {
     "labels": [
-      3,
-      3
+      2,
+      2
     ],
     "bboxes": [
       [
@@ -938,7 +794,7 @@
   },
   "shotgun-1011-_jpg.rf.eed19ac06960efe6149a2bef52372a75.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -951,11 +807,11 @@
   },
   "TZ1X1CLI9OU6_jpg.rf.ec3d60b22e116d1912352f2300d40ca9.jpg": {
     "labels": [
-      3,
-      3,
-      3,
-      3,
-      3
+      2,
+      2,
+      2,
+      2,
+      2
     ],
     "bboxes": [
       [
@@ -992,7 +848,7 @@
   },
   "E8AU0LD984NO_jpg.rf.a2d85582c19c4baa8c035c9f90a0cdd8.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1004,21 +860,12 @@
     ]
   },
   "DKHJBIO5RCS1_jpg.rf.4031878de9f66696b207088a10f33c1a.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.44642857142857145,
-        0.47879464285714285,
-        0.5357142857142857,
-        0.9129464285714286
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "3YAEJ5JT55UX_jpg.rf.dacd31d0e6ac6d7ecb67fbc189204671.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1030,21 +877,12 @@
     ]
   },
   "OC59DP5P8LRT_jpg.rf.d1874c1f249a9c59e58e8e23a4f42606.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5122767857142857,
-        0.46875,
-        0.953125,
-        0.38392857142857145
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "4DYM3WTBTEFU_jpg.rf.8cb11b0c87a1a0266b0b92c2360ed8f2.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1057,7 +895,7 @@
   },
   "5LAVDXBMWEIX_jpg.rf.b3afaf6ebbd4486c2260960aa6479d5e.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1069,28 +907,12 @@
     ]
   },
   "D3GLVQF2D8R9_jpg.rf.0bade9cc707cf9a71dbc640f1393904b.jpg": {
-    "labels": [
-      4,
-      4
-    ],
-    "bboxes": [
-      [
-        0.6116071428571429,
-        0.5591517857142857,
-        0.3482142857142857,
-        0.609375
-      ],
-      [
-        0.3716517857142857,
-        0.4408482142857143,
-        0.12723214285714285,
-        0.40848214285714285
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "CKC9AOH0RUUP_jpg.rf.101a7c1c3f8d24bfeab4e8520e2082ee.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1103,7 +925,7 @@
   },
   "D7P6EN0KB9VU_jpg.rf.3f6513eb8a5e57ce21be1de13ae2d5f5.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1116,7 +938,7 @@
   },
   "DEUCJY9OKHPJ_jpg.rf.f65e35a6681cd958d78072283f64f373.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1129,7 +951,7 @@
   },
   "200_webp.rf.190f2a0db94cdf439306a066f57703b0.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1142,7 +964,7 @@
   },
   "K0ZVVMD5OYFK_jpg.rf.91a55bd2062bb6292e58992e643eb789.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1155,7 +977,7 @@
   },
   "SQADNRIIBGCU_jpg.rf.1a1e6603ac2a82db756d6d9e01429e19.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1167,21 +989,12 @@
     ]
   },
   "EIAD2RVF6QHK_jpg.rf.0dd43e337e3839474741299def9fa449.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5725446428571429,
-        0.5524553571428571,
-        0.7700892857142857,
-        0.22991071428571427
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "LV1GDQV5PZ2K_jpg.rf.30b3434570ef22d9652bffb403d9c584.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1194,7 +1007,7 @@
   },
   "X3UEV32W4XK1_jpg.rf.24bce07753709dd0b48ecee732a9893c.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1206,21 +1019,12 @@
     ]
   },
   "PN8ATOPMN9V4_jpg.rf.f9acf13f6ebd05c8718d848dc0f8a0ab.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.45982142857142855,
-        0.4375,
-        0.09821428571428571,
-        0.24107142857142858
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "9D1715B5A0Y0_jpg.rf.da7881be520a81942aed5dd745ca106e.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1232,60 +1036,24 @@
     ]
   },
   "14DLPPEQDU39_jpg.rf.30c34beb9c9cad30e7d179c1f5b0a19f.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5167410714285714,
-        0.6082589285714286,
-        0.9620535714285714,
-        0.5200892857142857
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "4F5P1ZLCDIEA_jpg.rf.d2e29e0bc5da88b84a7223a8a95c1803.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.48549107142857145,
-        0.35714285714285715,
-        0.8995535714285714,
-        0.3392857142857143
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "NYYMHHCIKJAW_jpg.rf.02f9083e49b340bfdef68f28c869cb28.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.47098214285714285,
-        0.5457589285714286,
-        0.9419642857142857,
-        0.8772321428571429
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "PP1U61JBQ4HI_jpg.rf.1bd109b7d0f1473df55f472d82cecf98.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5,
-        0.5133928571428571,
-        1.0,
-        0.9732142857142857
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "RXU5LQAVORC0_jpg.rf.4ed87f732a243888fc9bdab232f9d2e3.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1298,7 +1066,7 @@
   },
   "VWU9CZXG2A08_jpg.rf.d6aa6a6208f390894a4666ca18f019ff.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1311,8 +1079,8 @@
   },
   "KU7LAAX1M7VT_jpg.rf.32bf520f7e7464aecd7bc2d08e6aac65.jpg": {
     "labels": [
-      3,
-      3
+      2,
+      2
     ],
     "bboxes": [
       [
@@ -1330,21 +1098,12 @@
     ]
   },
   "75UGUPLRKRSP_jpg.rf.1ac9c62aa6b9931044518542c13e67ba.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5223214285714286,
-        0.49888392857142855,
-        0.7142857142857143,
-        0.9620535714285714
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "V5AZUR5BYN99_jpg.rf.5ac841660a81d950025d81a43286c5b8.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1357,7 +1116,7 @@
   },
   "NFYL62NNO7C3_jpg.rf.d1d1f106b14233c125ab5d26003cefa6.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1370,8 +1129,8 @@
   },
   "shotgun-1135-_jpg.rf.c5263aade02dcdc75b189e573fed087d.jpg": {
     "labels": [
-      5,
-      5
+      3,
+      3
     ],
     "bboxes": [
       [
@@ -1390,7 +1149,7 @@
   },
   "OJFTBEQW9ZV4_jpg.rf.ddf06f2ac008d5114b587300c6a0b2e0.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1402,21 +1161,12 @@
     ]
   },
   "8OYM8JWVTC3A_jpg.rf.222b4ee7f1d60fb4ef1efc3679d9e6c0.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.31361607142857145,
-        0.43080357142857145,
-        0.25223214285714285,
-        0.33482142857142855
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "INFQUDVMZGVV_jpg.rf.f52bbb5cfdab83a6f0eb544ac6523c7e.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1429,7 +1179,7 @@
   },
   "MZ9H5VCHYCYU_jpg.rf.ad08db1826ed6fa8db42a4e70454c0ff.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1441,77 +1191,12 @@
     ]
   },
   "Q5H5D5CSWWU7_jpg.rf.99a176c9cd8580dea37024ac50514a91.jpg": {
-    "labels": [
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4,
-      4
-    ],
-    "bboxes": [
-      [
-        0.22433035714285715,
-        0.14620535714285715,
-        0.3236607142857143,
-        0.10491071428571429
-      ],
-      [
-        0.6238839285714286,
-        0.17075892857142858,
-        0.3013392857142857,
-        0.08258928571428571
-      ],
-      [
-        0.9118303571428571,
-        0.11607142857142858,
-        0.171875,
-        0.13392857142857142
-      ],
-      [
-        0.421875,
-        0.6127232142857143,
-        0.27232142857142855,
-        0.08258928571428571
-      ],
-      [
-        0.8013392857142857,
-        0.45870535714285715,
-        0.3080357142857143,
-        0.078125
-      ],
-      [
-        0.05133928571428571,
-        0.6026785714285714,
-        0.10267857142857142,
-        0.03571428571428571
-      ],
-      [
-        0.0625,
-        0.3872767857142857,
-        0.125,
-        0.04241071428571429
-      ],
-      [
-        0.044642857142857144,
-        0.21651785714285715,
-        0.08928571428571429,
-        0.04017857142857143
-      ],
-      [
-        0.1328125,
-        0.3203125,
-        0.05133928571428571,
-        0.015625
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "2CLPGWA30O6A_jpg.rf.c2a12b720032879767843d22711d480d.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1524,7 +1209,7 @@
   },
   "8O52UB0295RX_jpg.rf.f9be0e901534918fc26f032bc426c887.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1537,7 +1222,7 @@
   },
   "shotgun-1034-_jpg.rf.5b65c56c156dd0a7309e242c2c05503f.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1550,7 +1235,7 @@
   },
   "shotgun-1045-_jpg.rf.b0851a5e0fcbdcc510eb8c0736b6f7f4.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1563,7 +1248,7 @@
   },
   "YC2UDP4ZIYMV_jpg.rf.f326bbdf9774891474002d529a36f84f.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1576,7 +1261,7 @@
   },
   "5JA8XTMZ0B92_jpg.rf.e82501c83aae7661f04fb25260472236.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1589,7 +1274,7 @@
   },
   "shotgun-1030-_jpg.rf.420188e8b14c8c7721c2902da6f3b2b9.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1602,7 +1287,7 @@
   },
   "A9FYS5HWXWHO_jpg.rf.52f30acc62d13792ce91a9fbbcc04471.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1614,21 +1299,12 @@
     ]
   },
   "WZXG26ALMVL4_jpg.rf.b0f84b47a38bc589e39c0324d743db0b.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.6071428571428571,
-        0.43080357142857145,
-        0.7410714285714286,
-        0.5044642857142857
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1145-_jpg.rf.b6d8e6eca6fc817b2d3d4a47cdfc7840.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1641,7 +1317,7 @@
   },
   "CVSY2JMNYD4P_jpg.rf.f7f5b1bed6691062b09706050a90d413.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1654,7 +1330,7 @@
   },
   "shotgun-109-_jpg.rf.80536f65752d7f1962978159aa73df5d.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1666,21 +1342,12 @@
     ]
   },
   "5THPC1I461FQ_jpg.rf.65151bb9ba7adca17233e860d45c9278.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5011160714285714,
-        0.5066964285714286,
-        0.9129464285714286,
-        0.9598214285714286
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "JEFUBCZL3M45_jpg.rf.d6737a1f3311f7160341d1208191f665.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1693,7 +1360,7 @@
   },
   "KMI0TRCVH3UW_jpg.rf.48f0569745311eb0ddf1c9181a99ae04.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1705,34 +1372,16 @@
     ]
   },
   "LGQROFCG9NNE_jpg.rf.aea0dd1d5c253156f496ffda06901ea0.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5022321428571429,
-        0.49888392857142855,
-        0.9955357142857143,
-        0.9977678571428571
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "IW8NS4CMOTEZ_jpg.rf.9ef7cf099cf184a7ce9738c13512accb.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5089285714285714,
-        0.44419642857142855,
-        0.9464285714285714,
-        0.42410714285714285
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "A57YYZWM53MI_jpg.rf.7fe527c29b23c448396888a275eca8b9.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1744,21 +1393,12 @@
     ]
   },
   "HG1HFAODR4NP_jpg.rf.bebdf201b8f0092ace6f75bcd15f51e4.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.40066964285714285,
-        0.40066964285714285,
-        0.8013392857142857,
-        0.515625
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "1L01309ILJ3R_jpg.rf.99a683be095f7e724ecce657a2d663b4.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1770,74 +1410,24 @@
     ]
   },
   "KCIAX8G41XK3_jpg.rf.e14f716d7ec6ca2f90cdd6ec23e46a72.jpg": {
-    "labels": [
-      4,
-      4,
-      4
-    ],
-    "bboxes": [
-      [
-        0.26674107142857145,
-        0.5078125,
-        0.4174107142857143,
-        0.8102678571428571
-      ],
-      [
-        0.7522321428571429,
-        0.2611607142857143,
-        0.45089285714285715,
-        0.4419642857142857
-      ],
-      [
-        0.7455357142857143,
-        0.7455357142857143,
-        0.4642857142857143,
-        0.4375
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "3WFNYI33ZM8K_jpg.rf.09edc97b4c1894f81a29e2af222eb5bb.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5435267857142857,
-        0.5111607142857143,
-        0.6763392857142857,
-        0.6383928571428571
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "FKD0VUHL96JG_jpg.rf.797e3f0dd8213ec1ae489625301c8f48.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5,
-        0.375,
-        1.0,
-        0.75
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "OX23LNBT1R7Z_jpg.rf.635e60a3c5e9689c88016c0e7be5488a.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5,
-        0.4765625,
-        1.0,
-        0.953125
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1030-_jpg.rf.1680b58c09361d378bbb6bc9c761c17a.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1850,7 +1440,7 @@
   },
   "shotgun-1046-_jpg.rf.1309171741cc43e1d24d25e3b142d42f.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1863,7 +1453,7 @@
   },
   "1D0FASV3NV3W_jpg.rf.3d0880349a0e8454bbd9302a58984a89.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1876,7 +1466,7 @@
   },
   "shotgun-1143-_jpg.rf.e0bbf78d4c0b53d88b123c6508e0cc47.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1888,34 +1478,16 @@
     ]
   },
   "Q929PEOFR0AL_jpg.rf.46cde097590d02194556a2f3a088d186.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.48660714285714285,
-        0.35714285714285715,
-        0.9017857142857143,
-        0.6071428571428571
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "YK7XT6789X3X_jpg.rf.5dd62a88dd547417263b91da44ad7dad.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.4765625,
-        0.5412946428571429,
-        0.6316964285714286,
-        0.40401785714285715
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "UYPB8CEPUBSL_jpg.rf.7f7dba7cc17cb302b4d5b61fa7e79119.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1928,7 +1500,7 @@
   },
   "TJ4BSBWEMUOC_jpg.rf.180a3b75d26d07d5e7237985a8539ec7.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1940,21 +1512,12 @@
     ]
   },
   "98108BR23R9E_jpg.rf.25bea122cb258757123d40f882cebad8.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5212053571428571,
-        0.5256696428571429,
-        0.328125,
-        0.5870535714285714
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1087-_jpg.rf.ba86793d2350ed7fe04673ed2a1d13f3.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -1967,7 +1530,7 @@
   },
   "CQFPD5RXCI9V_jpg.rf.a06ce2d268b9847d24ce5dcb5c213711.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -1980,7 +1543,7 @@
   },
   "FRE2INVK6OMN_jpg.rf.aa5fbd80cd9186a3c5b0b73d80f11698.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -1993,7 +1556,7 @@
   },
   "Y9N5PL5G1IHG_jpg.rf.5daf8a5c0c0bc2706d99161333322d16.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -2006,7 +1569,7 @@
   },
   "D1R1NAAKNVML_jpg.rf.66f091f5e3ea0906f1564b0752ba75fd.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -2019,7 +1582,7 @@
   },
   "CG8MZ1VTUPUR_jpg.rf.67b0db245ea0db6d949b3abedfa44cca.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -2032,7 +1595,7 @@
   },
   "shotgun-950-_jpg.rf.ee339dd877ad7577ed33f29dbdd232fc.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -2045,7 +1608,7 @@
   },
   "shotgun-1005-_jpg.rf.483daae61f0f7b01b2abc0ce0922b83f.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -2058,7 +1621,7 @@
   },
   "shotgun-1051-_jpg.rf.bb3fc7742e7c0a8593cbef510a7e0eff.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -2071,7 +1634,7 @@
   },
   "HICI0THZ6JOJ_jpg.rf.16f90c701885e655a6127bc8f8106fa3.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
@@ -2083,21 +1646,12 @@
     ]
   },
   "GKV4FBD8TQWK_jpg.rf.6b2d16ced0bcbe783bdaaadc0d364ddb.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5066964285714286,
-        0.5011160714285714,
-        0.9866071428571429,
-        0.9665178571428571
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "shotgun-1004-_jpg.rf.f6cf52aa4a46edb3fd368e6018bf83c9.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -2110,7 +1664,7 @@
   },
   "shotgun-1007-_jpg.rf.2dbdd4c47fe3c802f0ef3910bc268121.jpg": {
     "labels": [
-      5
+      3
     ],
     "bboxes": [
       [
@@ -2122,62 +1676,16 @@
     ]
   },
   "O9SZC0LLQBVY_jpg.rf.f4c09d25cb7b248f8b0a9f9c6e0c8061.jpg": {
-    "labels": [
-      4,
-      4,
-      4,
-      4,
-      4
-    ],
-    "bboxes": [
-      [
-        0.19196428571428573,
-        0.5691964285714286,
-        0.08928571428571429,
-        0.12946428571428573
-      ],
-      [
-        0.40848214285714285,
-        0.5803571428571429,
-        0.049107142857142856,
-        0.08928571428571429
-      ],
-      [
-        0.5736607142857143,
-        0.5736607142857143,
-        0.03125,
-        0.07589285714285714
-      ],
-      [
-        0.8247767857142857,
-        0.5848214285714286,
-        0.078125,
-        0.10714285714285714
-      ],
-      [
-        0.5970982142857143,
-        0.6004464285714286,
-        0.06919642857142858,
-        0.12053571428571429
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "1WNZNY3LCSPR_jpg.rf.894011fd1fbac6517093825acd784ce4.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.4095982142857143,
-        0.5111607142857143,
-        0.8013392857142857,
-        0.9776785714285714
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "P6VQCMV5VKRA_jpg.rf.efbb713b8b012bdeb5ec7f344b8fecaa.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -2189,21 +1697,12 @@
     ]
   },
   "4AQ4EVAQXN1L_jpg.rf.6204fa9c93d74de9fa3304a8993b051b.jpg": {
-    "labels": [
-      4
-    ],
-    "bboxes": [
-      [
-        0.5100446428571429,
-        0.49107142857142855,
-        0.6897321428571429,
-        0.5446428571428571
-      ]
-    ]
+    "labels": [],
+    "bboxes": []
   },
   "YQVQZQSU0DF7_jpg.rf.06e64d8a2c8590c411d14b0bd41143d5.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -2216,7 +1715,7 @@
   },
   "1FLOHPLMGFR3_jpg.rf.558bff567964cbd58aef1efeafb4a4f1.jpg": {
     "labels": [
-      3
+      2
     ],
     "bboxes": [
       [
@@ -2229,7 +1728,7 @@
   },
   "JIPR8QC84NKS_jpg.rf.d13c98a5e96e8218fa34be89268f576c.jpg": {
     "labels": [
-      2
+      1
     ],
     "bboxes": [
       [
